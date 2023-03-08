@@ -44,12 +44,7 @@ def get_groups():
     return True
 
 
-def main():
+if __name__ == "__main__":
     url = "https://pnu.edu.ru/rasp/groups/"
     create_html(url)
     get_groups()
-    return True
-
-
-if __name__ == "__main__":
-    main()

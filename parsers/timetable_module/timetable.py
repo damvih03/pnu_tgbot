@@ -45,13 +45,16 @@ def get_timetable(url, group_name):
         group_timetable_dict.update({day_name: day_dict})
     timetable_dict = {}
     timetable_dict.update({group_name: group_timetable_dict})
-    with open("timetable.json", "w", encoding="UTF-8") as file:
-        json.dump(timetable_dict, file, indent=4, ensure_ascii=False)
-    return
+    return timetable_dict
 
 
 if __name__ == "__main__":
-    link = "https://pnu.edu.ru/rasp/groups/65538/"
-    group_name = "ИС(б) - 11"
-    create_html(link)
-    get_timetable(link, group_name)
+    links = ["https://pnu.edu.ru/rasp/groups/65538/", "https://pnu.edu.ru/rasp/groups/65544/"]
+    group_names = ["ИС(б) - 11", "УИТС(б) - 11"]
+    with open("timetable.json", 'r', encoding="UTF-8") as F:
+        timetables_dict = json.load(F)
+    for url, group_name in zip(links, group_names):
+        create_html(url)
+        timetables_dict.update(get_timetable(url, group_name))
+    with open("timetable.json", "w", encoding="UTF-8") as file:
+        json.dump(timetables_dict, file, indent=4, ensure_ascii=False)
