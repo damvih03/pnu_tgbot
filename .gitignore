@@ -1,0 +1,9 @@
+/.idea
+/venv
+# Временные файлы
+/parsers/timetable_module/.idea/
+/parsers/timetable_module/groups_info.json
+/parsers/timetable_module/index.html
+/parsers/timetable_module/faculties.json
+/parsers/timetable_module/timetable.json
+/parsers/timetable_module/test.py
