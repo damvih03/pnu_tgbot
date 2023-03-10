@@ -1,2 +1,2 @@
-# Telegram-bot of Pacific National University
+# Telegram-bot of Pacific National University [UNOFFICIAL]
 Hi everyone!
