@@ -1,5 +1,6 @@
 /.idea
 /venv
+/.env
 /test.py
 # Временные файлы
 /parsers/timetable_module/.idea/
@@ -8,3 +9,4 @@
 /parsers/timetable_module/faculties.json
 /parsers/timetable_module/timetable.json
 /parsers/timetable_module/test.py
+
