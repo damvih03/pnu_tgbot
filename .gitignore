@@ -1,5 +1,6 @@
 /.idea
 /venv
+/test.py
 # Временные файлы
 /parsers/timetable_module/.idea/
 /parsers/timetable_module/groups_info.json
